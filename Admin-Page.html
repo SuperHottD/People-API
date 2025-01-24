@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Панель управления пользователями</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="navbar">
+            <div class="header-navbar-button">
+                <a href="./Search-Page.html">Поиск</a>
+                <a href="./Admin-Page.html">Выдача прав</a>
+                <a href="./History-Page.html">История запросов</a>
+            </div>
+
+            <div class="navbar-balance"><p>Баланс:</p></div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="form">
+            <form id="userForm">
+                    <input type="login" placeholder="Имя пользователя" name="username" required>
+                    <input type="password" placeholder="Пароль" name="password" required>
+                    <button type="submit" class="button userForm-button">Создать пользователя</button>
+            </form>
+        </div>
+
+        <div class="table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Имя пользователя</th>
+                        <th>Админ</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>admin</td>
+                        <td><input type="checkbox" checked></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Структурированные данные пользователя</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .navbar {
+            background-color: #1a1a2e;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 0 15px;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .content-container {
+            max-width: 1000px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        .searchable {
+            color: blue;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        .searchable:hover {
+            color: darkblue;
+        }
+    </style>
+    <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                // Добавляем обработчики для элементов, которые можно использовать для повторного поиска
+                document.querySelectorAll('.searchable').forEach(item => {
+                    item.addEventListener('click', event => {
+                        const searchData = event.target.dataset.search;
+                        if (searchData) {
+                            alert(`Повторный поиск по: ${searchData}`);
+                            // Здесь вы можете выполнить логику для нового поиска
+                            console.log(`Запрос отправлен на сервер для поиска: ${searchData}`);
+                        }
+                    });
+                });
+        });
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#">Главная</a>
+        <a href="#">История</a>
+        <a href="#">Настройки</a>
+    </div>
+
+    <div class="content-container">
+        <h1>Структурированные данные</h1>
+        <h2>Личные данные</h2>
+        <ul>
+            <li><strong>ФИО:</strong> <span class="searchable" data-search="Иванов Иван Иванович">Иванов Иван Иванович</span></li>
+            <li><strong>Дата рождения:</strong> 15.05.1985</li>
+            <li><strong>СНИЛС:</strong> <span class="searchable" data-search="123-456-789 00">123-456-789 00</span></li>
+            <li><strong>ИНН:</strong> 123456789012</li>
+        </ul>
+
+        <h2>Контакты</h2>
+        <ul>
+            <li><strong>Телефон:</strong> <span class="searchable" data-search="+7 (912) 345-67-89">+7 (912) 345-67-89</span></li>
+            <li><strong>Email:</strong> <span class="searchable" data-search="example@mail.com">example@mail.com</span></li>
+        </ul>
+
+        <h2>Адреса</h2>
+        <ul>
+            <li><strong>Текущий адрес:</strong> Москва, ул. Ленина, д. 10</li>
+            <li><strong>Прописка:</strong> Санкт-Петербург, ул. Пушкина, д. 5</li>
+        </ul>
+    </div>
+</body>
+</html>
+
+

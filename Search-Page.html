@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск пользователя</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="navbar">
+            <div class="header-navbar-button">
+                <a href="./Search-Page.html">Поиск</a>
+                <a href="./Admin-Page.html">Выдача прав</a>
+                <a href="./History-Page.html">История запросов</a>
+            </div>
+
+            <div class="navbar-balance"><p>Баланс:</p></div>
+        </div>
+    </header>   
+
+    <main class="main">
+        <div class="form">
+            <form id="Form">
+                <h2>Человек</h2>
+                <input type="text" id="lastName" name="lastName" placeholder="Фамилия:" required>
+                <input type="text" id="firstName" name="firstName" placeholder="Имя:" required>
+                <input type="text" id="middleName" name="middleName" placeholder="Отчество:" required>
+                <input type="date" id="date" name="date">
+                <input type="inn" id="inn" name="inn" placeholder="ИНН:">
+                <input type="snils" id="snils" name="snils" placeholder="СНИЛС:">
+                <input type="passport" id="passport" name="passport" placeholder="Паспорт:">
+                <input type="driverLicense" id="driverLicense" name="driverLicense" placeholder="Водительские права:">
+            
+                <h2>Телефон</h2>
+                <input type="text" id="phone" name="phone" placeholder="Телефон:">
+            
+                <h2>Почта</h2>
+                <input type="email" id="email" name="email" placeholder="Почта:">
+            
+                <h2>Вконтакте</h2>
+                <input type="text" id="vkId" name="vkId" placeholder="ID пользователя:">
+                <input type="text" id="vkName" name="vkName" placeholder="Имя пользователя:">
+            
+                <h2>Одноклассники</h2>
+                <input type="text" id="okId" name="okId" placeholder="ID пользователя:">
+            
+                <h2>Авто</h2>
+                <input type="text" id="carNumber" name="carNumber" placeholder="Гос номер:">
+                <input type="vin" id="vin" name="vin" placeholder="VIN:">
+            
+                <button type="submit" class="button search-button">Отправить</button>
+            </form>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>

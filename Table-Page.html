@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отчет о пользователе</title>
+    <link rel="stylesheet" href="./table-style.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="navbar">
+            <div class="header-navbar-button">
+                <a href="./Search-Page.html">Поиск</a>
+                <a href="./Admin-Page.html">Выдача прав</a>
+                <a href="./History-Page.html">История запросов</a>
+            </div>
+
+            <div class="navbar-balance"><p>Баланс:</p></div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="inter-button">
+            <button class="button table-button refresh-button" id="refresh-button">Обновить</button>
+            <button class="button table-button" onclick="toggleFullTable()">Показать/Скрыть всю таблицу</button>
+        </div>
+
+    <div class="container">
+        <div class="tabs">
+            <div class="tab active" onclick="showTab(0)">Личные данные</div>
+            <div class="tab" onclick="showTab(1)">Контакты</div>
+            <div class="tab" onclick="showTab(2)">Адреса</div>
+            <div class="tab" onclick="showTab(3)">Финансовые данные</div>
+            <div class="tab" onclick="showTab(4)">Транспортные средства</div>
+            <div class="tab" onclick="showTab(5)">История активности</div>
+            <div class="tab" onclick="showTab(6)">Образование</div>
+            <div class="tab" onclick="showTab(7)">Медицинские данные</div>
+            <div class="tab" onclick="showTab(8)">Публичные данные</div>
+            <div class="tab" onclick="showTab(9)">Связанные лица</div>
+        </div>
+
+        <div class="content-container">
+            <div class="content active">
+                <h3>Личные данные</h3>
+                <ul>
+                    <li><strong>ФИО: </strong><span data-type="ФИО">Иванов Иван Иванович</span></li>
+                    <li><strong>Дата рождения: </strong><span data-type="Дата рождения">1985-05-15</span></li>
+                    <li><strong>Паспорт: </strong><span data-type="Паспорт">4501 234567</span>, выдан 10.08.2005</li>
+                    <li><strong>СНИЛС: </strong><span data-type="СНИЛС">123-456-789 00</span></li>
+                    <li><strong>ИНН: </strong><span data-type="ИНН">123456789012</span></li>
+                </ul>
+            </div>
+
+            <div class="content">
+                <h3>Контакты</h3>
+                <ul>
+                    <li><strong>Телефоны:</strong>
+                        <ul>
+                            <li><span class="clickable" data-type="Телефон">79111234567</span></li>
+                            <li><span class="clickable" data-type="Телефон">79112233445</span></li>
+                            <li><span class="clickable" data-type="Телефон">79113334456</span></li>
+                        </ul>
+                    </li>
+                    <li><strong>Email:</strong>
+                        <ul>
+                            <li><span class="clickable" data-type="Email">example@mail.ru</span></li>
+                            <li><span class="clickable" data-type="Email">info@example.ru</span></li>
+                            <li><span class="clickable" data-type="Email">support@example.com</span></li>
+                        </ul>
+                    </li>
+                    <li><strong>Социальные сети:</strong>
+                        <ul>
+                            <li>VK: <span class="clickable" data-type="VK">vk.com/example</span><a href="https://vk.com/example">Ссылка</a></li>
+                            <li>Telegram: @example</li>
+                            <li>Instagram: <span class="clickable" data-type="Instagram">instagram.com/example</span><a href="https://instagram.com/example">Ссылка</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="content">
+                <h3>Адреса</h3>
+                <ul>
+                    <li><strong>Текущий адрес:</strong> Москва, ул. Пушкина, д. 10, кв. 1</li>
+                    <li><strong>Адрес прописки:</strong> Москва, ул. Ленина, д. 50</li>
+                    <li><strong>История адресов:</strong>
+                        <ul>
+                            <li>Санкт-Петербург, ул. Ленина, д. 25, кв. 3</li>
+                            <li>Екатеринбург, ул. Мира, д. 15</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="content">
+                <h3>Финансовые данные</h3>
+                <ul>
+                    <li><strong>Исполнительные производства:</strong>
+                        <ul>
+                            <li>Номер: 12345/21/16004-ИП</li>
+                            <li>Долг: 50,000 рублей</li>
+                        </ul>
+                    </li>
+                    <li><strong>Банки:</strong> Сбербанк, Альфа-Банк</li>
+                </ul>
+            </div>
+
+            <div class="content">
+                <h3>Транспортные средства</h3>
+                <ul>
+                    <li><strong>Автомобили:</strong>
+                        <ul>
+                            <li>Toyota Camry <span class="clickable" data-type="Автомобили">(VIN: XW8ZZZ3CZ9E123456</span>, Госномер: А123МР77)</li>
+                            <li>Hyundai Solaris <span class="clickable" data-type="Автомобили">(VIN: KM8J3CA4XJU731234</span>, Госномер: О456ЕР99)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Водительское удостоверение: </strong><span class="clickable" data-type="Водительское удостоверение">7700123456</span></li>
+                </ul>
+            </div>
+
+            <div class="content">
+                <h3>История активности</h3>
+                <ul>
+                    <li><strong>Доставка еды:</strong> Использован телефон 79221234567, заказы отправлялись на адрес ул. Цветочная, д. 5</li>
+                    <li><strong>Покупки:</strong>
+                        <ul>
+                            <li>Avito: Холодильник Bosch за 30,000 рублей (15.11.2022)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Автомобильные сервисы:</strong> Регистрация на Auto.ru: 12.09.2021</li>
+                </ul>
+            </div>
+
+            <div class="content">
+                <h3>Образование</h3>
+                <ul>
+                    <li>Московский государственный университет, факультет экономики (2003-2008)</li>
+                    <li>Школа №123, г. Москва (1993-2003)</li>
+                    <li>Курс "Основы программирования", Skillbox (2020)</li>
+                </ul>
+            </div>
+
+            <div class="content">
+                <h3>Медицинские данные</h3>
+                <ul>
+                    <li><strong>Полис ОМС:</strong> оформлен 2010-06-15</li>
+                    <li><strong>Медицинская организация:</strong> Поликлиника №123, Москва</li>
+                </ul>
+            </div>
+
+            <div class="content">
+                <h3>Публичные данные</h3>
+                <ul>
+                    <li><strong>Avito:</strong> объявления, включая бытовую технику</li>
+                    <li><strong>OLX:</strong> Продажа велосипедов и аксессуаров</li>
+                    <li><strong>Youla:</strong> данные о продаже автомобиля</li>
+                </ul>
+            </div>
+
+            <div class="content">
+                <h3>Связанные лица</h3>
+                <ul>
+                    <li><strong>Ассоциированные контакты:</strong>
+                        <ul>
+                            <li><span class="clickable" data-type="ФИО">Смирнова Ольга Петровна</span></li>
+                            <li>Телефон:<span class="clickable" data-type="Телефон">79171234567</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="full-table" id="full-table">
+        <h1>Полная таблица данных</h1>
+        <div class="content-container">
+            <div>
+                <h3>Личные данные</h3>
+                <ul>
+                    <li><strong>ФИО:</strong> Иванов Иван Иванович</li>
+                    <li><strong>Дата рождения:</strong> 1985-05-15</li>
+                    <li><strong>Паспорт:</strong> 4501 234567, выдан 10.08.2005</li>
+                    <li><strong>СНИЛС:</strong> 123-456-789 00</li>
+                    <li><strong>ИНН:</strong> 123456789012</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Контакты</h3>
+                <ul>
+                    <li><strong>Телефоны:</strong>
+                        <ul>
+                            <li>79111234567 (основной)</li>
+                            <li>79112233445 (рабочий)</li>
+                            <li>79113334456 (дополнительный)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Email:</strong>
+                        <ul>
+                            <li>example@mail.ru</li>
+                            <li>info@example.ru</li>
+                            <li>support@example.com</li>
+                        </ul>
+                    </li>
+                    <li><strong>Социальные сети:</strong>
+                        <ul>
+                            <li>VK: <a href="https://vk.com/example">vk.com/example</a></li>
+                            <li>Telegram: @example</li>
+                            <li>Instagram: <a href="https://instagram.com/example">instagram.com/example</a></li>
+                            <li>Facebook: <a href="https://facebook.com/example">facebook.com/example</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3>Адреса</h3>
+                <ul>
+                    <li><strong>Текущий адрес:</strong> Москва, ул. Пушкина, д. 10, кв. 1</li>
+                    <li><strong>Прописка:</strong> Москва, ул. Ленина, д. 50</li>
+                    <li><strong>Исторические адреса:</strong>
+                        <ul>
+                            <li>Санкт-Петербург, ул. Ленина, д. 25, кв. 3</li>
+                            <li>Екатеринбург, ул. Мира, д. 15</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h3>Финансовые данные</h3>
+                <ul>
+                    <li><strong>Исполнительные производства:</strong>
+                        <ul>
+                            <li>Номер: 12345/21/16004-ИП</li>
+                            <li>Долг: 50,000 рублей</li>
+                        </ul>
+                    </li>
+                    <li><strong>Банки:</strong> Сбербанк, Альфа-Банк</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Транспортные средства</h3>
+                <ul>
+                    <li><strong>Автомобили:</strong>
+                        <ul>
+                            <li>Toyota Camry (VIN: XW8ZZZ3CZ9E123456, Госномер: А123МР77)</li>
+                            <li>Hyundai Solaris (VIN: KM8J3CA4XJU731234, Госномер: О456ЕР99)</li>
+                            <li>BMW X5 (VIN: WBABC41040LG12345, Госномер: Р789ТР77)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Водительское удостоверение:</strong> 7700123456</li>
+                </ul>
+            </div>
+            <div>
+                <h3>История активности</h3>
+                <ul>
+                    <li><strong>Доставка еды:</strong> Использован телефон 79221234567, заказы отправлялись на адрес ул. Цветочная, д. 5</li>
+                    <li><strong>Покупки:</strong>
+                        <ul>
+                            <li>Avito: Холодильник Bosch за 30,000 рублей (15.11.2022)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Автомобильные сервисы:</strong> Регистрация на Auto.ru: 12.09.2021</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Образование</h3>
+                <ul>
+                    <li>Московский государственный университет, факультет экономики (2003-2008)</li>
+                    <li>Школа №123, г. Москва (1993-2003)</li>
+                    <li>Курс "Основы программирования", Skillbox (2020)</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Медицинские данные</h3>
+                <ul>
+                    <li><strong>Полис ОМС:</strong> оформлен 2010-06-15</li>
+                    <li><strong>Медицинская организация:</strong> Поликлиника №123, Москва</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Публичные данные</h3>
+                <ul>
+                    <li><strong>Avito:</strong> объявления, включая бытовую технику</li>
+                    <li><strong>OLX:</strong> Продажа велосипедов и аксессуаров</li>
+                    <li><strong>Youla:</strong> данные о продаже автомобиля</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Связанные лица</h3>
+                <ul>
+                    <li><strong>Ассоциированные контакты:</strong>
+                        <ul>
+                            <li>Смирнова Ольга Петровна</li>
+                            <li>Телефон: 79171234567</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <button type="submit" class="button download-pdf-button">Cкачать PDF</button>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
+
+
+

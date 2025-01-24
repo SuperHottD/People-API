@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.inter-button {
+    display: flex;
+    max-width: 40%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    column-gap: 20px;
+}
+
+.table-button {
+    padding: 15px 25px;
+}
+
+.tabs {
+    width: 280px;
+    background: #99999934;
+    border-right: 1px solid #ddd;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.tab {
+    padding: 15px;
+    cursor: pointer;
+    background: #f1f1f1;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.tab:hover {
+    background: #99999934;
+}
+
+.tab.active {
+    background: #fff;
+    font-weight: bold;
+    border-right: 2px solid #000;
+}
+
+.content-container {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.content {
+    display: none;
+}
+
+.content.active {
+    display: block;
+}
+
+.full-table {
+    display: none;
+}
+
+.full-table.active {
+    display: block;
+    margin: 20px auto;
+    max-width: 1000px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #000;
+    font-size: 2em;
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #3b4257;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 15px 0 15px 25px;
+}
+
+.clickable {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.clickable:hover {
+    color: darkblue;
+}
+
+.full-table.active {
+    background: #99999934;
+}
+
+.download-pdf-button {
+    padding: 15px 25px; 
+}
+
