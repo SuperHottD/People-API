@@ -1,0 +1,28 @@
+.swiper {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    max-width: 100%;
+    height: 575px;
+    cursor: default;  
+    overflow: hidden;
+}
+
+.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    display: flex;
+    column-gap: 14px;
+    justify-content: center;
+}
+
+.swiper-pagination-bullet {
+    width: 10px; /* Ширина точки */
+    height: 10px; /* Высота точки */
+    background-color: transparent; /* Прозрачный фон */
+    border: 1px solid white; 
+    transition: background 0.3s, opacity 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: white;
+    opacity: 1;
+}

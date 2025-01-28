@@ -1,0 +1,163 @@
+@media (max-width: 1400px) {
+    .medium-title {
+        font-size: clamp(20px, 2.08vw, 40px);
+    }
+
+    .motivation-card-image {
+        margin-block: -20px;
+        max-width: 30%;
+        height: auto;
+    }
+
+    .motivation-card-body {
+        padding-left: 50px;
+    }
+
+    .calculate-body {
+        padding-left: 30px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .training-types-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .join-us-form {
+        padding-inline: 15px;
+    }
+
+    .calculate-form-body {
+        grid-template-columns: repeat(1,5fr);
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .motivation-card-image {
+        margin-block: -20px;
+        max-width: 40%;
+        height: auto;
+    }
+}
+
+@media (max-width: 1025px) {
+    .header {
+        flex-wrap: wrap;
+        padding-top: 50px;
+        row-gap: 10px;
+        padding-inline: 15px;
+        padding-top: 10px;
+    }
+
+    .header-menu {
+        order: 1;
+        flex-basis: 100%;
+    }
+
+    .header-menu-link {
+        height: 50px;
+    }
+
+    .banner {
+        padding-inline: 15px;
+    }
+
+    .motivation-card {
+        padding: 20px;
+    }
+
+    .motivation-card-image {
+        margin-block: 0;
+    }
+
+    .location {
+        display: flex;
+        flex-direction: column-reverse;
+}
+}
+
+@media (max-width: 850px) {
+    .calculate {
+        padding-block: 50px
+    }
+    .calculate-inner{
+        flex-direction: column;
+        row-gap: 50px;
+    }
+
+    .calculate-table-wrapper::before {
+        display: none;
+}
+}
+@media (max-width: 770px) {
+
+    .header-menu-list {
+        column-gap: 15px;
+    }
+
+    .header-menu-link {
+        height: 32px;
+    }
+
+    .header-buttons {
+        column-gap: 15px;
+    }
+
+    .button {
+    padding-inline: 20px;
+    }
+
+    .banner-info {
+        margin-bottom: 5px;
+
+    }
+    .banner-info::before {
+        margin-right: 10px;
+    }
+
+    .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+        margin-top: 20px;
+    }
+
+    .motivation-card {
+        flex-direction: column-reverse;
+        padding: 30px;
+        row-gap: 30px;
+    }
+
+    .motivation-item:nth-child(even) .motivation-card {
+        flex-direction: column-reverse;
+    }
+
+    .motivation-card-body {
+        padding-left: 20px;
+    }
+
+    .motivation-card-image {
+        max-width: 65%;
+    }
+
+    .motivation-card-description  {
+        margin-bottom: 20px;
+    }
+
+    .training-types-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .join-us-form-body {
+    flex-direction: column;
+    row-gap: 15px;
+    align-items: center;
+    }
+}
+
+
+@media (max-width: 550px)  {
+    .motivation-card-image {
+        max-width: 75%;
+    }
+    
+}
