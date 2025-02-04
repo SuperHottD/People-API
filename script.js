@@ -31,6 +31,20 @@ function toggleDownloadButton() {
     }
 }
 
+function showTab(index) {
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.content');
+
+    tabs.forEach((tab, i) => {
+        if (i === index) {
+            tab.classList.add('active');
+            contents[i].classList.add('active');
+        } else {
+            tab.classList.remove('active');
+            contents[i].classList.remove('active');
+        }
+    });
+}
 
   // Добавление обработчика события для кнопки
 const refreshButton = document.getElementById('refresh-button');
